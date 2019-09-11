@@ -35,12 +35,46 @@
       text-align: end;
     }
 
+    #inputs {
+      align-items: center;
+    }
+
     #description {
       padding-top: 30px;
     }
     
     #survey-form {
       margin: 15px 30px 15px 20px;
+    }
+
+    .input-field {
+      height: 20px;
+      width: 280px;
+      padding: 5px;
+      border: 1px solid #c0c0c0;
+      border-radius: 2px;
+    }
+
+    .userRatings {
+      text-align: left;
+    }
+
+    #dropdown {
+      height: 30px;
+      width: 35%;
+      padding: 5px;
+      border: 1px solid #c0c0c0;
+    }
+
+    #submit {
+      background-color: #59ace0;
+      border-radius: 4px;
+      color: white;
+      font-size: 1em;
+      height: 40px;
+      width: 96px;
+      margin: 10px;
+      border: 0px solid;
     }
   </style>
   <head>
@@ -54,21 +88,21 @@
       </header>
       <form id="survey-form" action="">
         <div class="row">
-          <div class="column">
+          <div class="column" id="inputs">
             <label for="name" id="name-label">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+            <input class="input-field" type="text" id="name" placeholder="Enter your name" required>
           </div>
         </div>
         <div class="row">
-          <div class="column">
+          <div class="column" id="inputs">
             <label for="email" id="email-label">E-mail:</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+            <input class="input-field" type="email" id="email" placeholder="Enter your email" required>
           </div>
         </div>
         <div class="row">
-          <div class="column">
+          <div class="column" id="inputs">
             <label for="number" id="number-label">Age:</label>
-            <input type="number" id="number" placeholder="Enter your age" min="18" max="35" required>
+            <input class="input-field" type="number" id="number" placeholder="Enter your age" min="18" max="35" required>
           </div>
         </div>
         <div class="row">
@@ -86,7 +120,7 @@
         <div class="row">
           <div class="column">
             <label for="quality">How would you classify your experience at the company?</label>
-            <div style="text-align: start">
+            <div class="userRatings">
               <input type="radio" name="quality" id="" value="excellent">Excellent<br>
               <input type="radio" name="quality" id="" value="good">Good<br>
               <input type="radio" name="quality" id="" value="regular">Regular<br>
@@ -98,7 +132,7 @@
         <div class="row">
           <div class="column">
             <label for="goods">What would you think it needs to be improved at the company?</label>
-            <div style="text-align: start">
+            <div class="userRatings">
               <input type="checkbox" name="goods" id="" value="cafeteria">Cafeteria<br>
               <input type="checkbox" name="goods" id="" value="desks">Desks<br>
               <input type="checkbox" name="goods" id="" value="ponctuality">Ponctuality<br>
@@ -112,7 +146,7 @@
         <div class="row">
           <div class="column">
             <label for="textarea">Please, feel free to add any comments you would like:</label>
-            <textarea name="comment" id="textarea" cols="20" rows="5"></textarea><br>
+            <textarea style="height:50px;resize:vertical;" placeholder="Enter you comment here..." class="input-field" name="comment" id="textarea" cols="20" rows="5"></textarea><br>
           </div>
         </div>
         <button id="submit">Submit</button>
