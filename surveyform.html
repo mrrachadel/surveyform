@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <style>
     html {
       font-size: 12px;
@@ -29,12 +30,34 @@
         <p>Please, fill in the form below in order to have your informations on our system:</p>
       </header>
       <form id="survey-form" action="">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required><br>
-        <label for="email">E-mail:</label>
-        <input type="text" id="email" required><br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" required>
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br>
+        <label for="email" id="email-label">E-mail:</label>
+        <input type="text" id="email" placeholder="Enter your email" required><br>
+        <label for="age" id="name-label">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" min="18" max="35" required><br>
+        <label for="position">Which is your current position at the company:</label>
+        <select name="positions" id="position" required>
+          <option value="selected" disabled selected>Select an option</option>
+          <option value="front">Front-End Developer</option>
+          <option value="back">Back-End Developer</option>
+          <option value="fullstack">FullStack Developer</option>
+          <option value="other">Other</option>
+        </select><br>
+        <label for="quality">How would you classify your experience at the company?</label><br>
+        <input type="radio" name="quality" id="" value="excellent">Excellent<br>
+        <input type="radio" name="quality" id="" value="good">Good<br>
+        <input type="radio" name="quality" id="" value="regular">Regular<br>
+        <input type="radio" name="quality" id="" value="bad">Bad<br>
+        <input type="radio" name="quality" id="" value="terrible">Terrible<br>
+        <label for="goods">What would you think it needs to be improve at the company?</label><br>
+        <input type="checkbox" name="goods" id="" value="cafeteria">Cafeteria<br>
+        <input type="checkbox" name="goods" id="" value="desks">Desks<br>
+        <input type="checkbox" name="goods" id="" value="ponctuality">Ponctuality<br>
+        <input type="checkbox" name="goods" id="" value="communication">Communication<br>
+        <input type="checkbox" name="goods" id="" value="values">Values<br>
+        <input type="checkbox" name="goods" id="" value="goals">Goals<br>
+        <input type="checkbox" name="goods" id="" value="others">Others<br>
       </form>
     </main>
   </body>
