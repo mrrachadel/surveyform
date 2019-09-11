@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    html {
+      font-size: 12px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body {
+      font-size: 1.6em;
+      line-height: 1.5;
+      text-align: center;
+      margin: 0;
+      background-color: lightgray;
+    }
+
+    #main {
+      background-color: white;
+      margin: auto 45px auto 45px;
+    }
+  </style>
   <head>
-    <h1 id="title">A Survey Form</h1>
+    <h1 id="title">Survey Form</h1>
   </head>
 
   <body>
-    <main>
-
+    <main id="main">
+      <header id="description">
+        <p>Please, fill in the form below in order to have your informations on our system:</p>
+      </header>
+      <form id="survey-form" action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+      </form>
     </main>
   </body>
 </html>
