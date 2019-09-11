@@ -21,6 +21,27 @@
       border-radius: 5px;
       padding-bottom: 10px;
     }
+
+    .row {
+      display: grid;
+      grid-template-rows: auto;
+    }
+
+    .column {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin: 10px 15px 10px 15px;
+      grid-column-gap: 15px;
+      text-align: end;
+    }
+
+    #description {
+      padding-top: 30px;
+    }
+    
+    #survey-form {
+      margin: 15px 30px 15px 20px;
+    }
   </style>
   <head>
     <h1 id="title">Survey Form</h1>
@@ -32,36 +53,68 @@
         <p id="description">Please, fill in the form below in order to have your informations on our system:</p>
       </header>
       <form id="survey-form" action="">
-        <label for="name" id="name-label">Name:</label>
-        <input type="text" id="name" placeholder="Enter your name" required><br>
-        <label for="email" id="email-label">E-mail:</label>
-        <input type="email" id="email" placeholder="Enter your email" required><br>
-        <label for="number" id="number-label">Age:</label>
-        <input type="number" id="number" placeholder="Enter your age" min="18" max="35" required><br>
-        <label for="position">Which is your current position at the company:</label>
-        <select name="positions" id="dropdown" required>
-          <option value="selected" disabled selected>Select an option</option>
-          <option value="front">Front-End Developer</option>
-          <option value="back">Back-End Developer</option>
-          <option value="fullstack">FullStack Developer</option>
-          <option value="other">Other</option>
-        </select><br>
-        <label for="quality">How would you classify your experience at the company?</label><br>
-        <input type="radio" name="quality" id="" value="excellent">Excellent<br>
-        <input type="radio" name="quality" id="" value="good">Good<br>
-        <input type="radio" name="quality" id="" value="regular">Regular<br>
-        <input type="radio" name="quality" id="" value="bad">Bad<br>
-        <input type="radio" name="quality" id="" value="terrible">Terrible<br>
-        <label for="goods">What would you think it needs to be improved at the company?</label><br>
-        <input type="checkbox" name="goods" id="" value="cafeteria">Cafeteria<br>
-        <input type="checkbox" name="goods" id="" value="desks">Desks<br>
-        <input type="checkbox" name="goods" id="" value="ponctuality">Ponctuality<br>
-        <input type="checkbox" name="goods" id="" value="communication">Communication<br>
-        <input type="checkbox" name="goods" id="" value="values">Values<br>
-        <input type="checkbox" name="goods" id="" value="goals">Goals<br>
-        <input type="checkbox" name="goods" id="" value="others">Others<br>
-        <label for="textarea">Please, feel free to add any comments you would like:</label>
-        <textarea name="comment" id="textarea" cols="20" rows="5"></textarea><br>
+        <div class="row">
+          <div class="column">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="email" id="email-label">E-mail:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="number" id="number-label">Age:</label>
+            <input type="number" id="number" placeholder="Enter your age" min="18" max="35" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="position">Which is your current position at the company:</label>
+            <select name="positions" id="dropdown" required>
+              <option value="selected" disabled selected>Select an option</option>
+              <option value="front">Front-End Developer</option>
+              <option value="back">Back-End Developer</option>
+              <option value="fullstack">FullStack Developer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="quality">How would you classify your experience at the company?</label>
+            <div style="text-align: start">
+              <input type="radio" name="quality" id="" value="excellent">Excellent<br>
+              <input type="radio" name="quality" id="" value="good">Good<br>
+              <input type="radio" name="quality" id="" value="regular">Regular<br>
+              <input type="radio" name="quality" id="" value="bad">Bad<br>
+              <input type="radio" name="quality" id="" value="terrible">Terrible<br>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="goods">What would you think it needs to be improved at the company?</label>
+            <div style="text-align: start">
+              <input type="checkbox" name="goods" id="" value="cafeteria">Cafeteria<br>
+              <input type="checkbox" name="goods" id="" value="desks">Desks<br>
+              <input type="checkbox" name="goods" id="" value="ponctuality">Ponctuality<br>
+              <input type="checkbox" name="goods" id="" value="communication">Communication<br>
+              <input type="checkbox" name="goods" id="" value="values">Values<br>
+              <input type="checkbox" name="goods" id="" value="goals">Goals<br>
+              <input type="checkbox" name="goods" id="" value="others">Others
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="textarea">Please, feel free to add any comments you would like:</label>
+            <textarea name="comment" id="textarea" cols="20" rows="5"></textarea><br>
+          </div>
+        </div>
         <button id="submit">Submit</button>
       </form>
     </main>
