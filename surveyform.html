@@ -17,7 +17,9 @@
 
     #main {
       background-color: white;
-      margin: auto 45px auto 45px;
+      margin: auto 45px 15px 45px;
+      border-radius: 5px;
+      padding-bottom: 10px;
     }
   </style>
   <head>
@@ -26,18 +28,18 @@
 
   <body>
     <main id="main">
-      <header id="description">
-        <p>Please, fill in the form below in order to have your informations on our system:</p>
+      <header>
+        <p id="description">Please, fill in the form below in order to have your informations on our system:</p>
       </header>
       <form id="survey-form" action="">
         <label for="name" id="name-label">Name:</label>
         <input type="text" id="name" placeholder="Enter your name" required><br>
         <label for="email" id="email-label">E-mail:</label>
-        <input type="text" id="email" placeholder="Enter your email" required><br>
-        <label for="age" id="name-label">Age:</label>
-        <input type="number" id="age" placeholder="Enter your age" min="18" max="35" required><br>
+        <input type="email" id="email" placeholder="Enter your email" required><br>
+        <label for="number" id="number-label">Age:</label>
+        <input type="number" id="number" placeholder="Enter your age" min="18" max="35" required><br>
         <label for="position">Which is your current position at the company:</label>
-        <select name="positions" id="position" required>
+        <select name="positions" id="dropdown" required>
           <option value="selected" disabled selected>Select an option</option>
           <option value="front">Front-End Developer</option>
           <option value="back">Back-End Developer</option>
@@ -50,7 +52,7 @@
         <input type="radio" name="quality" id="" value="regular">Regular<br>
         <input type="radio" name="quality" id="" value="bad">Bad<br>
         <input type="radio" name="quality" id="" value="terrible">Terrible<br>
-        <label for="goods">What would you think it needs to be improve at the company?</label><br>
+        <label for="goods">What would you think it needs to be improved at the company?</label><br>
         <input type="checkbox" name="goods" id="" value="cafeteria">Cafeteria<br>
         <input type="checkbox" name="goods" id="" value="desks">Desks<br>
         <input type="checkbox" name="goods" id="" value="ponctuality">Ponctuality<br>
@@ -58,6 +60,9 @@
         <input type="checkbox" name="goods" id="" value="values">Values<br>
         <input type="checkbox" name="goods" id="" value="goals">Goals<br>
         <input type="checkbox" name="goods" id="" value="others">Others<br>
+        <label for="textarea">Please, feel free to add any comments you would like:</label>
+        <textarea name="comment" id="textarea" cols="20" rows="5"></textarea><br>
+        <button id="submit">Submit</button>
       </form>
     </main>
   </body>
